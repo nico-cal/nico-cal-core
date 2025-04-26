@@ -1,0 +1,18 @@
+erDiagram
+    Users ||--o{ Diaries : "書く"
+    
+    Users {
+        string userId PK "ユーザーID（プライマリキー）"
+        string password "ハッシュ化されたパスワード"
+        timestamp createdAt "作成日時"
+        timestamp updatedAt "更新日時"
+    }
+    
+    Diaries {
+        string userId PK "ユーザーID（パーティションキー）"
+        string date PK "日付（YYYY-MM-DD形式、ソートキー）"
+        string emotion "感情状態（'good', 'normal', 'bad'）"
+        string content "日記本文"
+        timestamp createdAt "作成日時"
+        timestamp updatedAt "更新日時"
+    }

@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"  # LocalStackのデフォルトポート
+      - "4510-4559:4510-4559"  # その他のサービス用ポート
+    environment:
+      - SERVICES=dynamodb,s3  # 現在使用するAWSサービス（必要に応じて追加可能）
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - LAMBDA_EXECUTOR=local
+      - LOCALSTACK_API_KEY=${LOCALSTACK_API_KEY-}  # 必要に応じてAPIキーを設定
+    volumes:
+      - "${TMPDIR:-/tmp}/localstack:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      
+  # 将来的にバックエンドサービスを追加予定
+  # backend:
+  #   build: ./backend
+  #   ports:
+  #     - "3001:3001"
+  #   depends_on:
+  #     - localstack
+  #   environment:
+  #     - AWS_ENDPOINT=http://localstack:4566
+  #     - NODE_ENV=development
+  
+  # 将来的にフロントエンドサービスを追加予定
+  # frontend:
+  #   build: ./frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+  #   environment:
+  #     - API_URL=http://backend:3001
+  #     - NODE_ENV=development
+
+volumes:
+  localstack-data:
+    driver: local

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="800" height="60" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="40" y="37" font-family="Arial" font-size="24" font-weight="bold">nico-cal</text>
+  
+  <!-- ユーザーメニュー -->
+  <circle cx="740" cy="30" r="20" fill="#eeeeee" stroke="#cccccc" stroke-width="1"/>
+  <text x="740" y="35" font-family="Arial" font-size="14" text-anchor="middle">ユーザー</text>
+  
+  <!-- 月選択 -->
+  <rect x="250" y="70" width="300" height="40" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="400" y="95" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">2025年4月</text>
+  
+  <!-- 前月ボタン -->
+  <polygon points="270,90 285,80 285,100" fill="#666666"/>
+  
+  <!-- 翌月ボタン -->
+  <polygon points="530,90 515,80 515,100" fill="#666666"/>
+  
+  <!-- 曜日ヘッダー -->
+  <rect x="100" y="120" width="600" height="30" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="140" y="140" font-family="Arial" font-size="14" text-anchor="middle">日</text>
+  <text x="220" y="140" font-family="Arial" font-size="14" text-anchor="middle">月</text>
+  <text x="300" y="140" font-family="Arial" font-size="14" text-anchor="middle">火</text>
+  <text x="380" y="140" font-family="Arial" font-size="14" text-anchor="middle">水</text>
+  <text x="460" y="140" font-family="Arial" font-size="14" text-anchor="middle">木</text>
+  <text x="540" y="140" font-family="Arial" font-size="14" text-anchor="middle">金</text>
+  <text x="620" y="140" font-family="Arial" font-size="14" text-anchor="middle">土</text>
+  
+  <!-- カレンダーグリッド（例として4月の一部） -->
+  <!-- 第1週 -->
+  <rect x="100" y="150" width="80" height="80" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="115" y="170" font-family="Arial" font-size="14">30</text>
+  <rect x="180" y="150" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="195" y="170" font-family="Arial" font-size="14">31</text>
+  <rect x="260" y="150" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="275" y="170" font-family="Arial" font-size="14">1</text>
+  <!-- 感情アイコン（良い） -->
+  <circle cx="300" cy="190" r="15" fill="#81c784"/>
+  <rect x="340" y="150" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="355" y="170" font-family="Arial" font-size="14">2</text>
+  <!-- 感情アイコン（普通） -->
+  <circle cx="380" cy="190" r="15" fill="#ffb74d"/>
+  <rect x="420" y="150" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="435" y="170" font-family="Arial" font-size="14">3</text>
+  <rect x="500" y="150" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="515" y="170" font-family="Arial" font-size="14">4</text>
+  <!-- 感情アイコン（良い） -->
+  <circle cx="540" cy="190" r="15" fill="#81c784"/>
+  <rect x="580" y="150" width="80" height="80" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="595" y="170" font-family="Arial" font-size="14">5</text>
+  
+  <!-- 第2週 -->
+  <rect x="100" y="230" width="80" height="80" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="115" y="250" font-family="Arial" font-size="14">6</text>
+  <rect x="180" y="230" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="195" y="250" font-family="Arial" font-size="14">7</text>
+  <!-- 感情アイコン（悪い） -->
+  <circle cx="220" cy="270" r="15" fill="#e57373"/>
+  <rect x="260" y="230" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="275" y="250" font-family="Arial" font-size="14">8</text>
+  <rect x="340" y="230" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="355" y="250" font-family="Arial" font-size="14">9</text>
+  <!-- 感情アイコン（普通） -->
+  <circle cx="380" cy="270" r="15" fill="#ffb74d"/>
+  <rect x="420" y="230" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="435" y="250" font-family="Arial" font-size="14">10</text>
+  <rect x="500" y="230" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="515" y="250" font-family="Arial" font-size="14">11</text>
+  <rect x="580" y="230" width="80" height="80" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="595" y="250" font-family="Arial" font-size="14">12</text>
+  
+  <!-- 更に週を追加（省略） -->
+  
+  <!-- 第3週（一部だけ表示） -->
+  <rect x="100" y="310" width="80" height="80" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="115" y="330" font-family="Arial" font-size="14">13</text>
+  <rect x="180" y="310" width="80" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="195" y="330" font-family="Arial" font-size="14">14</text>
+  
+  <!-- 省略記号 -->
+  <text x="400" y="385" font-family="Arial" font-size="30" text-anchor="middle">...</text>
+  
+  <!-- 新規日記作成ボタン -->
+  <circle cx="720" cy="520" r="30" fill="#4caf50" stroke="none"/>
+  <text x="720" y="525" font-family="Arial" font-size="30" fill="#ffffff" text-anchor="middle">+</text>
+  
+  <!-- 凡例 -->
+  <rect x="580" y="500" width="120" height="80" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="5" ry="5"/>
+  <text x="590" y="520" font-family="Arial" font-size="12" fill="#666666">感情状態:</text>
+  
+  <circle cx="600" cy="540" r="8" fill="#81c784"/>
+  <text x="620" y="545" font-family="Arial" font-size="12" fill="#666666">良い</text>
+  
+  <circle cx="600" cy="560" r="8" fill="#ffb74d"/>
+  <text x="620" y="565" font-family="Arial" font-size="12" fill="#666666">普通</text>
+  
+  <circle cx="600" cy="580" r="8" fill="#e57373"/>
+  <text x="620" y="585" font-family="Arial" font-size="12" fill="#666666">悪い</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="550" width="800" height="50" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="400" y="580" font-family="Arial" font-size="12" fill="#999999" text-anchor="middle">© 2025 nico-cal All Rights Reserved.</text>
+</svg>

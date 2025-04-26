@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="800" height="60" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="40" y="37" font-family="Arial" font-size="24" font-weight="bold">nico-cal</text>
+  
+  <!-- 戻るボタン -->
+  <text x="700" y="37" font-family="Arial" font-size="16" fill="#2196f3">戻る</text>
+  
+  <!-- メインコンテンツエリア -->
+  <rect x="100" y="80" width="600" height="440" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- 日記詳細のタイトル -->
+  <text x="400" y="120" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">日記詳細</text>
+  
+  <!-- 日付表示 -->
+  <text x="150" y="160" font-family="Arial" font-size="16" font-weight="bold">2025年4月27日 (日)</text>
+  
+  <!-- 感情状態表示 -->
+  <text x="150" y="200" font-family="Arial" font-size="14" fill="#666666">今日の気分</text>
+  
+  <!-- 良い（選択されている状態） -->
+  <circle cx="180" cy="230" r="25" fill="#81c784" stroke="#81c784" stroke-width="2"/>
+  <text x="180" y="235" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">良い</text>
+  
+  <!-- 日記内容表示 -->
+  <rect x="150" y="260" width="500" height="180" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1" rx="3" ry="3"/>
+  <foreignObject x="160" y="270" width="480" height="160">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial; font-size: 14px; line-height: 1.5; color: #333333; margin: 0; padding: 0;">
+      今日はとても良い一日だった。朝早く起きて散歩に行ったら、近所の桜が満開で美しかった。<br/><br/>
+      午後は友人と久しぶりに会って、新しいカフェでお茶をした。色々な話をして心が軽くなった気がする。<br/><br/>
+      夜は早めに寝ようと思う。明日も良い日になりますように。
+    </p>
+  </foreignObject>
+  
+  <!-- 作成日時・更新日時 -->
+  <text x="150" y="460" font-family="Arial" font-size="12" fill="#999999">作成日時: 2025-04-27 21:15:30</text>
+  <text x="400" y="460" font-family="Arial" font-size="12" fill="#999999">更新日時: 2025-04-27 21:15:30</text>
+  
+  <!-- 編集ボタン -->
+  <rect x="150" y="480" width="120" height="40" fill="#2196f3" stroke="none" rx="3" ry="3"/>
+  <text x="210" y="505" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">編集</text>
+  
+  <!-- 削除ボタン -->
+  <rect x="290" y="480" width="120" height="40" fill="#ffffff" stroke="#e57373" stroke-width="1" rx="3" ry="3"/>
+  <text x="350" y="505" font-family="Arial" font-size="16" fill="#e57373" text-anchor="middle">削除</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="550" width="800" height="50" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="400" y="580" font-family="Arial" font-size="12" fill="#999999" text-anchor="middle">© 2025 nico-cal All Rights Reserved.</text>
+</svg>

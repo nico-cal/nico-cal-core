@@ -1,0 +1,54 @@
+graph TB
+    %% アクター
+    User((ユーザー))
+    
+    %% ユースケース
+    UC1[ログイン]
+    UC2[ログアウト]
+    UC3[カレンダー表示]
+    UC4[日記の作成]
+    UC5[日記の編集]
+    UC6[日記の閲覧]
+    UC7[感情状態の記録]
+    UC8[新規登録]
+    UC9[退会]
+    
+    %% 関係
+    User --> UC1
+    User --> UC2
+    User --> UC3
+    User --> UC4
+    User --> UC5
+    User --> UC6
+    User --> UC8
+    User --> UC9
+    
+    %% 包含関係
+    UC4 -.-> UC7
+    UC5 -.-> UC7
+    
+    %% スタイル
+    classDef usecase fill:#e1f5fe,stroke:#01579b,stroke-width:1px;
+    classDef actor fill:#ffebee,stroke:#c62828,stroke-width:1px;
+    
+    class UC1,UC2,UC3,UC4,UC5,UC6,UC7,UC8,UC9 usecase;
+    class User actor;
+    
+    %% ノートとラベル
+    subgraph 認証機能
+        UC1
+        UC2
+        UC8
+        UC9
+    end
+    
+    subgraph カレンダー機能
+        UC3
+    end
+    
+    subgraph 日記機能
+        UC4
+        UC5
+        UC6
+        UC7
+    end

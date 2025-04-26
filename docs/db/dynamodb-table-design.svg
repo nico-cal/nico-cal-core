@@ -1,0 +1,97 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f9f9f9"/>
+  
+  <!-- タイトル -->
+  <text x="400" y="50" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">nico-cal DynamoDBテーブル設計</text>
+  
+  <!-- Usersテーブル -->
+  <g transform="translate(150, 120)">
+    <!-- テーブルヘッダー -->
+    <rect width="220" height="40" fill="#4472c4" rx="5" ry="5"/>
+    <text x="110" y="25" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Usersテーブル</text>
+    
+    <!-- テーブル本体 -->
+    <rect y="40" width="220" height="130" fill="#d9e1f2" rx="5" ry="5"/>
+    
+    <!-- 属性リスト -->
+    <text x="10" y="65" font-family="Arial" font-size="14">userId (PK)</text>
+    <text x="10" y="90" font-family="Arial" font-size="14">password</text>
+    <text x="10" y="115" font-family="Arial" font-size="14">createdAt</text>
+    <text x="10" y="140" font-family="Arial" font-size="14">updatedAt</text>
+    
+    <!-- 型情報 -->
+    <text x="210" y="65" font-family="Arial" font-size="14" text-anchor="end">string</text>
+    <text x="210" y="90" font-family="Arial" font-size="14" text-anchor="end">string</text>
+    <text x="210" y="115" font-family="Arial" font-size="14" text-anchor="end">timestamp</text>
+    <text x="210" y="140" font-family="Arial" font-size="14" text-anchor="end">timestamp</text>
+  </g>
+  
+  <!-- Diariesテーブル -->
+  <g transform="translate(450, 120)">
+    <!-- テーブルヘッダー -->
+    <rect width="220" height="40" fill="#ed7d31" rx="5" ry="5"/>
+    <text x="110" y="25" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Diariesテーブル</text>
+    
+    <!-- テーブル本体 -->
+    <rect y="40" width="220" height="180" fill="#fbe5d6" rx="5" ry="5"/>
+    
+    <!-- 属性リスト -->
+    <text x="10" y="65" font-family="Arial" font-size="14">userId (PK)</text>
+    <text x="10" y="90" font-family="Arial" font-size="14">date (SK)</text>
+    <text x="10" y="115" font-family="Arial" font-size="14">emotion</text>
+    <text x="10" y="140" font-family="Arial" font-size="14">content</text>
+    <text x="10" y="165" font-family="Arial" font-size="14">createdAt</text>
+    <text x="10" y="190" font-family="Arial" font-size="14">updatedAt</text>
+    
+    <!-- 型情報 -->
+    <text x="210" y="65" font-family="Arial" font-size="14" text-anchor="end">string</text>
+    <text x="210" y="90" font-family="Arial" font-size="14" text-anchor="end">string</text>
+    <text x="210" y="115" font-family="Arial" font-size="14" text-anchor="end">string</text>
+    <text x="210" y="140" font-family="Arial" font-size="14" text-anchor="end">string</text>
+    <text x="210" y="165" font-family="Arial" font-size="14" text-anchor="end">timestamp</text>
+    <text x="210" y="190" font-family="Arial" font-size="14" text-anchor="end">timestamp</text>
+  </g>
+  
+  <!-- リレーション矢印 -->
+  <g>
+    <path d="M370 170 L450 170" stroke="#666" stroke-width="2" fill="none"/>
+    <polygon points="442,165 450,170 442,175" fill="#666"/>
+  </g>
+  
+  <!-- テーブルの詳細情報 -->
+  <g transform="translate(100, 350)">
+    <text x="0" y="0" font-family="Arial" font-size="18" font-weight="bold">テーブル詳細</text>
+    
+    <!-- Usersテーブル詳細 -->
+    <text x="0" y="30" font-family="Arial" font-size="16" font-weight="bold">Usersテーブル</text>
+    <text x="0" y="55" font-family="Arial" font-size="14">- プライマリキー: userId</text>
+    <text x="0" y="80" font-family="Arial" font-size="14">- パスワードはハッシュ化して保存</text>
+    <text x="0" y="105" font-family="Arial" font-size="14">- 認証に使用</text>
+    
+    <!-- Diariesテーブル詳細 -->
+    <text x="0" y="140" font-family="Arial" font-size="16" font-weight="bold">Diariesテーブル</text>
+    <text x="0" y="165" font-family="Arial" font-size="14">- パーティションキー: userId</text>
+    <text x="0" y="190" font-family="Arial" font-size="14">- ソートキー: date (YYYY-MM-DD形式)</text>
+    <text x="0" y="215" font-family="Arial" font-size="14">- emotion: "good", "normal", "bad"のいずれか</text>
+    <text x="0" y="240" font-family="Arial" font-size="14">- ユーザーごとに日付順で日記を取得可能</text>
+  </g>
+  
+  <!-- クエリパターン -->
+  <g transform="translate(450, 350)">
+    <text x="0" y="0" font-family="Arial" font-size="18" font-weight="bold">主要クエリパターン</text>
+    
+    <text x="0" y="30" font-family="Arial" font-size="14">1. ユーザー認証</text>
+    <text x="20" y="50" font-family="Arial" font-size="13">- Usersテーブルから userId で GetItem</text>
+    
+    <text x="0" y="80" font-family="Arial" font-size="14">2. 特定日の日記取得</text>
+    <text x="20" y="100" font-family="Arial" font-size="13">- Diariesテーブルから userId と date で GetItem</text>
+    
+    <text x="0" y="130" font-family="Arial" font-size="14">3. 期間指定での日記一覧取得</text>
+    <text x="20" y="150" font-family="Arial" font-size="13">- Diariesテーブルから userId で Query</text>
+    <text x="20" y="170" font-family="Arial" font-size="13">- date の範囲条件を指定</text>
+    
+    <text x="0" y="200" font-family="Arial" font-size="14">4. カレンダー月表示用の日記一覧</text>
+    <text x="20" y="220" font-family="Arial" font-size="13">- 月初から月末までの範囲で Query</text>
+  </g>
+</svg>

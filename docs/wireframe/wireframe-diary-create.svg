@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="800" height="60" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="40" y="37" font-family="Arial" font-size="24" font-weight="bold">nico-cal</text>
+  
+  <!-- 戻るボタン -->
+  <text x="700" y="37" font-family="Arial" font-size="16" fill="#2196f3">戻る</text>
+  
+  <!-- メインコンテンツエリア -->
+  <rect x="100" y="80" width="600" height="440" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- 日記作成フォームのタイトル -->
+  <text x="400" y="120" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">新規日記作成</text>
+  
+  <!-- 日付選択 -->
+  <rect x="150" y="150" width="200" height="40" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="3" ry="3"/>
+  <text x="150" y="145" font-family="Arial" font-size="14" fill="#666666">日付</text>
+  <text x="160" y="175" font-family="Arial" font-size="14">2025-04-27</text>
+  <polygon points="335,170 325,160 325,180" fill="#666666"/>
+  
+  <!-- 感情選択 -->
+  <text x="150" y="220" font-family="Arial" font-size="14" fill="#666666">今日の気分</text>
+  
+  <!-- 良い -->
+  <circle cx="180" cy="250" r="25" fill="#ffffff" stroke="#81c784" stroke-width="2"/>
+  <circle cx="180" cy="250" r="17" fill="#81c784"/>
+  <text x="180" y="255" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">良い</text>
+  
+  <!-- 普通 -->
+  <circle cx="250" cy="250" r="25" fill="#ffffff" stroke="#ffb74d" stroke-width="2"/>
+  <text x="250" y="255" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">普通</text>
+  
+  <!-- 悪い -->
+  <circle cx="320" cy="250" r="25" fill="#ffffff" stroke="#e57373" stroke-width="2"/>
+  <text x="320" y="255" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">悪い</text>
+  
+  <!-- コメント入力 -->
+  <text x="150" y="300" font-family="Arial" font-size="14" fill="#666666">コメント</text>
+  <rect x="150" y="310" width="500" height="150" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="3" ry="3"/>
+  <text x="160" y="330" font-family="Arial" font-size="14" fill="#999999" font-style="italic">今日あったことや感じたことを自由に書いてみましょう...</text>
+  
+  <!-- 保存ボタン -->
+  <rect x="150" y="480" width="120" height="40" fill="#4caf50" stroke="none" rx="3" ry="3"/>
+  <text x="210" y="505" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">保存</text>
+  
+  <!-- キャンセルボタン -->
+  <rect x="290" y="480" width="120" height="40" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="3" ry="3"/>
+  <text x="350" y="505" font-family="Arial" font-size="16" fill="#666666" text-anchor="middle">キャンセル</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="550" width="800" height="50" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="400" y="580" font-family="Arial" font-size="12" fill="#999999" text-anchor="middle">© 2025 nico-cal All Rights Reserved.</text>
+</svg>

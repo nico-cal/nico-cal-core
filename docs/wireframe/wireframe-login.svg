@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="800" height="60" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="40" y="37" font-family="Arial" font-size="24" font-weight="bold">nico-cal</text>
+  
+  <!-- メインコンテンツエリア -->
+  <rect x="200" y="150" width="400" height="320" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- ログインフォームのタイトル -->
+  <text x="400" y="190" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">ログイン</text>
+  
+  <!-- ユーザーID入力 -->
+  <rect x="250" y="220" width="300" height="40" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="3" ry="3"/>
+  <text x="250" y="215" font-family="Arial" font-size="14" fill="#666666">ユーザーID</text>
+  
+  <!-- パスワード入力 -->
+  <rect x="250" y="290" width="300" height="40" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="3" ry="3"/>
+  <text x="250" y="285" font-family="Arial" font-size="14" fill="#666666">パスワード</text>
+  
+  <!-- ログインボタン -->
+  <rect x="250" y="360" width="300" height="40" fill="#4caf50" stroke="none" rx="3" ry="3"/>
+  <text x="400" y="385" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">ログイン</text>
+  
+  <!-- 新規登録リンク -->
+  <text x="400" y="430" font-family="Arial" font-size="14" fill="#2196f3" text-anchor="middle">アカウントをお持ちでない方は新規登録</text>
+  <line x1="250" y1="435" x2="550" y2="435" stroke="#2196f3" stroke-width="1"/>
+  
+  <!-- フッター -->
+  <rect x="0" y="550" width="800" height="50" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="400" y="580" font-family="Arial" font-size="12" fill="#999999" text-anchor="middle">© 2025 nico-cal All Rights Reserved.</text>
+</svg>
