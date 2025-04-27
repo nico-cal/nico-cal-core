@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nico-cal Frontend
+
+Frontend web application for the nico-cal diary service.
+
+## Tech Stack
+
+- Next.js (App Router) with TypeScript
+- React 19
+- Zod for validation
+- NextAuth.js for authentication
+- React Hook Form for form handling
+- shadcn/ui for UI components
+- Tailwind CSS for styling
+- Vitest for testing
+- ESLint and Prettier for code quality
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Navigate to the frontend directory
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Create a `.env.local` file with your environment variables:
+
+```bash
+cp .env.example .env.local
+```
+
+5. Edit the `.env.local` file with your configuration
+
+### Development
+
+Start the development server with hot-reload:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For HTTPS development (with self-signed certificates):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev:https
+```
 
-## Learn More
+### Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This will create an optimized production build.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Running in Production
 
-## Deploy on Vercel
+```bash
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For HTTPS in production:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run start:https
+```
+
+## Directory Structure
+
+```
+/
+├── src/                  # Source code
+│   ├── app/              # Next.js App Router pages and layouts
+│   ├── components/       # Reusable UI components
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and shared libraries
+│   └── public/           # Static assets
+├── certificates/         # SSL certificates for HTTPS development
+├── public/               # Public static files
+└── ...config files       # Various configuration files
+```
+
+## Key Features
+
+- **Calendar View** - Monthly calendar showing emotion states
+- **Diary Creation/Editing** - Record daily emotions and comments
+- **Authentication** - Secure user login/logout
+- **Responsive Design** - Works on mobile and desktop
+
+## Screen Structure
+
+- **Login Screen** - User authentication
+- **Calendar Screen** (Home) - Monthly view with emotion indicators
+- **Diary Creation Screen** - Create new diary entries
+- **Diary Editing Screen** - Modify existing entries
+- **Diary Detail Screen** - View specific day's entry
+- **Common Header** - Navigation and logout
+
+## Development
+
+### Linting
+
+```bash
+npm run lint
+```
+
+### Formatting
+
+```bash
+npm run format
+```
+
+### Testing
+
+```bash
+npm test
+```
+
+## Development Guidelines
+
+- Use TypeScript for all code (avoid `any` type)
+- Implement proper type definitions
+- Follow the component structure for UI elements
+- Use React Hook Form for all forms
+- Use Zod for validation
+- Write tests for components and hooks
+
+## Deployment
+
+The application is configured for deployment on Vercel. The deployment process is automated through Vercel's integration with the repository.
+
+## Connection to Backend
+
+The frontend connects to the nico-cal backend API for data storage and retrieval. The backend API is available at `/api` endpoints.
+
+See the backend README for more details on the API endpoints and authentication.
