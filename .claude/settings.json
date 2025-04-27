@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Batch",
+      "Read",
+      "Write"
+    ]
+  }
+}
