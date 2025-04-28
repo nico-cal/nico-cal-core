@@ -1,18 +1,18 @@
 /**
  * 感情状態の種類
  */
-export type EmotionType = 'good' | 'normal' | 'bad';
+export type EmotionType = "good" | "normal" | "bad";
 
 /**
  * 日記データの型定義
  */
 export interface DiaryEntry {
   userId: string;
-  date: string;         // YYYY-MM-DD形式
+  date: string; // YYYY-MM-DD形式
   emotion: EmotionType;
   content: string;
-  createdAt: string;    // ISO 8601形式
-  updatedAt: string;    // ISO 8601形式
+  createdAt: string; // ISO 8601形式
+  updatedAt: string; // ISO 8601形式
 }
 
 /**
@@ -38,7 +38,7 @@ export interface CalendarData {
  */
 export interface DiaryDate {
   date: Date;
-  dateString: string;   // YYYY-MM-DD形式
+  dateString: string; // YYYY-MM-DD形式
   emotion?: EmotionType;
   isToday: boolean;
 }
