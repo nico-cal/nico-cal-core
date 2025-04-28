@@ -1,7 +1,7 @@
 /**
  * 感情状態の種類
  */
-export type EmotionType = "good" | "normal" | "bad";
+export type EmotionType = 'good' | 'normal' | 'bad';
 
 /**
  * 日記データの型定義

@@ -1,9 +1,9 @@
-import { Metadata } from "next";
-import { LoginForm } from "@/components/login/login-form";
+import { Metadata } from 'next';
+import { LoginForm } from '@/components/login/login-form';
 
 export const metadata: Metadata = {
-  title: "ログイン - nico-cal",
-  description: "nico-calへログインしてください",
+  title: 'ログイン - nico-cal',
+  description: 'nico-calへログインしてください',
 };
 
 /**

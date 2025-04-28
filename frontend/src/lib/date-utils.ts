@@ -19,10 +19,7 @@ export function getFirstDayOfMonth(year: number, month: number): number {
 /**
  * 指定した年月の全ての日付を2次元配列として取得（週ごとに配列化）
  */
-export function getCalendarDays(
-  year: number,
-  month: number,
-): (Date | null)[][] {
+export function getCalendarDays(year: number, month: number): (Date | null)[][] {
   const daysInMonth = getDaysInMonth(year, month);
   const firstDayOfMonth = getFirstDayOfMonth(year, month);
 
@@ -59,8 +56,8 @@ export function getCalendarDays(
  */
 export function formatDateToString(date: Date): string {
   const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
 
   return `${year}-${month}-${day}`;
 }
@@ -69,7 +66,7 @@ export function formatDateToString(date: Date): string {
  * YYYY-MM-DD形式の文字列をDateオブジェクトに変換
  */
 export function parseDateString(dateString: string): Date {
-  const [year, month, day] = dateString.split("-").map(Number);
+  const [year, month, day] = dateString.split('-').map(Number);
   return new Date(year, month - 1, day);
 }
 
@@ -77,7 +74,7 @@ export function parseDateString(dateString: string): Date {
  * 日付を「○月○日（曜日）」形式でフォーマット
  */
 export function formatDateToJapanese(date: Date): string {
-  const dayOfWeek = ["日", "月", "火", "水", "木", "金", "土"][date.getDay()];
+  const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
   const month = date.getMonth() + 1;
   const day = date.getDate();
 
