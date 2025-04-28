@@ -12,7 +12,7 @@ const handle = app.getRequestHandler();
 const certDir = path.join(__dirname, 'certificates');
 const httpsOptions = {
   key: fs.readFileSync(path.join(certDir, 'localhost.key')),
-  cert: fs.readFileSync(path.join(certDir, 'localhost.crt'))
+  cert: fs.readFileSync(path.join(certDir, 'localhost.crt')),
 };
 
 // ポート3001で起動
