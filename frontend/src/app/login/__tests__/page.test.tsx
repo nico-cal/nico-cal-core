@@ -7,6 +7,14 @@ vi.mock('@/components/login/login-form', () => ({
   LoginForm: vi.fn(() => <div data-testid="mocked-login-form" />),
 }));
 
+// 認証関連ユーティリティのモック
+vi.mock('@/lib/auth/utils', () => ({
+  useRedirectIfAuthenticated: vi.fn().mockReturnValue({
+    isAuthenticated: false,
+    isLoading: false,
+  }),
+}));
+
 describe('LoginPage', () => {
   it('正しくレンダリングされること', () => {
     render(<LoginPage />);

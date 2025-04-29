@@ -1,6 +1,10 @@
+'use client';
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { loginSchema, LoginFormValues } from '@/lib/schemas/auth';
 
 /**
@@ -9,6 +13,7 @@ import { loginSchema, LoginFormValues } from '@/lib/schemas/auth';
 export function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   const {
     register,
@@ -30,21 +35,20 @@ export function LoginForm() {
     setError(null);
 
     try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+      // NextAuthのsignIn関数を使用してログイン
+      const result = await signIn('credentials', {
+        userId: data.userId,
+        password: data.password,
+        redirect: false,
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'ログインに失敗しました');
+      if (result?.error) {
+        throw new Error(result.error || 'ログインに失敗しました');
       }
 
       // ログイン成功時の処理
-      window.location.href = '/';
+      router.push('/');
+      router.refresh(); // セッション情報を更新するためにページを更新
     } catch (err) {
       setError(err instanceof Error ? err.message : 'ログインに失敗しました');
     } finally {
