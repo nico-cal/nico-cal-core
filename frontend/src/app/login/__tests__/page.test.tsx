@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import LoginPage from '../page';
 
@@ -16,11 +16,15 @@ vi.mock('@/lib/auth/utils', () => ({
 }));
 
 describe('LoginPage', () => {
+  beforeEach(() => {
+    vi.resetAllMocks();
+  });
+
   it('正しくレンダリングされること', () => {
     render(<LoginPage />);
 
     // ページのタイトルとサブタイトルが表示されていることを確認
-    expect(screen.getByText('nico-cal')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /nico-cal/i })).toBeInTheDocument();
     expect(screen.getByText('アカウントにログイン')).toBeInTheDocument();
 
     // LoginFormコンポーネントがレンダリングされていることを確認
