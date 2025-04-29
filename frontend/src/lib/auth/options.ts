@@ -49,7 +49,7 @@ export const authOptions: NextAuthOptions = {
           }
 
           const validatedCredentials = loginSchema.safeParse(credentials);
-          
+
           if (!validatedCredentials.success) {
             console.error('バリデーションエラー:', validatedCredentials.error);
             return null;
@@ -58,13 +58,13 @@ export const authOptions: NextAuthOptions = {
           // APIエンドポイントに認証リクエストを送信
           const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
             method: 'POST',
-            headers: { 
+            headers: {
               'Content-Type': 'application/json',
-              'Accept': 'application/json'
+              Accept: 'application/json',
             },
             body: JSON.stringify(validatedCredentials.data),
             // 認証リクエストのタイムアウト設定
-            cache: 'no-store'
+            cache: 'no-store',
           });
 
           if (!response.ok) {
@@ -128,7 +128,7 @@ export const authOptions: NextAuthOptions = {
 
   // セキュリティ設定
   secret: process.env.NEXTAUTH_SECRET,
-  
+
   // デバッグモード（開発環境のみ）
   debug: process.env.NODE_ENV === 'development',
 };

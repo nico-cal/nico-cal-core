@@ -115,9 +115,9 @@ export function useRedirectIfAuthenticated(options?: { redirectTo?: string }) {
  */
 export function useAccessToken() {
   const { session, refreshSession } = useAuth();
-  return { 
+  return {
     accessToken: session?.accessToken,
-    refreshToken: refreshSession 
+    refreshToken: refreshSession,
   };
 }
 
@@ -126,17 +126,15 @@ export function useAccessToken() {
  * @returns ログアウト関数
  */
 export function useLogout() {
-  const router = useRouter();
-
   const logout = useCallback(async () => {
     try {
       await signOut({ callbackUrl: '/login' });
       return { success: true };
     } catch (error) {
       console.error('ログアウトエラー:', error);
-      return { 
-        success: false, 
-        error: error instanceof Error ? error.message : 'ログアウト処理中にエラーが発生しました' 
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'ログアウト処理中にエラーが発生しました',
       };
     }
   }, []);

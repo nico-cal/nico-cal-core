@@ -37,7 +37,7 @@ export function LoginForm() {
     try {
       // 新しいuseLoginフックを使用してログイン
       const result = await login(data);
-      
+
       if (!result.success) {
         setError(result.error || 'ログインに失敗しました');
       }

@@ -44,12 +44,14 @@ describe('Home', () => {
 
     // メインコンテンツが表示されていることを確認
     expect(screen.getByText('ようこそ！')).toBeInTheDocument();
-    
+
     // ナビゲーションリンクが表示されていることを確認
     expect(screen.getByText('カレンダーを見る')).toBeInTheDocument();
     expect(screen.getByText('今日の日記を書く')).toBeInTheDocument();
-    
+
     // フッターが表示されていることを確認
-    expect(screen.getByText(/nico-cal\. All rights reserved\./, { exact: false })).toBeInTheDocument();
+    expect(
+      screen.getByText(/nico-cal\. All rights reserved\./, { exact: false })
+    ).toBeInTheDocument();
   });
 });

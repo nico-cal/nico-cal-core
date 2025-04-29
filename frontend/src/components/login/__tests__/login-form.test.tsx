@@ -11,9 +11,9 @@ vi.mock('@/lib/auth/utils', () => ({
         return Promise.resolve({ success: true });
       }
       // 失敗の場合
-      return Promise.resolve({ 
-        success: false, 
-        error: '認証に失敗しました'
+      return Promise.resolve({
+        success: false,
+        error: '認証に失敗しました',
       });
     }),
   }),
@@ -50,11 +50,11 @@ describe('LoginForm', () => {
 
   it('バリデーションエラーが表示されること', async () => {
     render(<LoginForm />);
-    
+
     // フォームを送信
     const submitButton = screen.getByRole('button', { name: 'ログイン' });
     fireEvent.click(submitButton);
-    
+
     // バリデーションエラーが表示されることを確認
     await waitFor(() => {
       expect(screen.getByText('ユーザーIDは3文字以上で入力してください')).toBeInTheDocument();
@@ -64,18 +64,18 @@ describe('LoginForm', () => {
 
   it('認証失敗時にエラーメッセージが表示されること', async () => {
     render(<LoginForm />);
-    
+
     // 無効な認証情報を入力
-    fireEvent.change(screen.getByLabelText('ユーザーID'), { 
-      target: { value: 'invaliduser' } 
+    fireEvent.change(screen.getByLabelText('ユーザーID'), {
+      target: { value: 'invaliduser' },
     });
-    fireEvent.change(screen.getByLabelText('パスワード'), { 
-      target: { value: 'invalidpassword' } 
+    fireEvent.change(screen.getByLabelText('パスワード'), {
+      target: { value: 'invalidpassword' },
     });
-    
+
     // フォーム送信
     fireEvent.click(screen.getByRole('button', { name: 'ログイン' }));
-    
+
     // エラーメッセージが表示されることを確認
     await waitFor(() => {
       expect(screen.getByText('認証に失敗しました')).toBeInTheDocument();
