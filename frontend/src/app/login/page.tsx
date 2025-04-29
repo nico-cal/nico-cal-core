@@ -1,15 +1,15 @@
-import { Metadata } from 'next';
-import { LoginForm } from '@/components/login/login-form';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'ログイン - nico-cal',
-  description: 'nico-calへログインしてください',
-};
+import { LoginForm } from '@/components/login/login-form';
+import { useRedirectIfAuthenticated } from '@/lib/auth/utils';
 
 /**
  * ログインページ
  */
 export default function LoginPage() {
+  // 既に認証済みの場合はホームページにリダイレクト
+  useRedirectIfAuthenticated();
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md space-y-8">
